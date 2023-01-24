@@ -1,0 +1,19 @@
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root{
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* Define custom height value */
+@layer utilities {
+  .h-custom-200 {
+    height: 200px;
+  },
+  .placeholder-textarea::placeholder {
+    color: blue;
+  }
+}
+
+
