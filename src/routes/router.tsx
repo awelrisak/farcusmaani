@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
         {
     path: "/",
     Component: Root,
-    errorElement: <h1>Error</h1>
+    errorElement: <h1>Error has occured</h1>
   },
   {
     path: "*",
@@ -19,4 +19,6 @@ export const router = createBrowserRouter([
   }
      ]
    }
-])
+], {
+  basename: "/farcusmaani"
+})

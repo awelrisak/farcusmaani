@@ -58,7 +58,7 @@ const Converter = () => {
   }
   
   return (
-  <div className="mb-16">
+  <section className="mb-16">
    
   
     <button
@@ -132,7 +132,7 @@ const Converter = () => {
       value={state ? toLatinAlphabet(text) : toOsmaniaAlphabet(text) }
     />
     </div>
-    </div>
+    </section>
   );
 }
 

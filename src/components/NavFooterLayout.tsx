@@ -8,7 +8,9 @@ const NavFooterLayout = () => {
   return (
     <>
       <Navbar />
+      <main>
       <Outlet />
+      </main>
       <Footer />
     </>
   )
