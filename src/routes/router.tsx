@@ -19,6 +19,4 @@ export const router = createBrowserRouter([
   }
      ]
    }
-], {
-  basename: "/farcusmaani"
-})
+])
