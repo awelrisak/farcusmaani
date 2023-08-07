@@ -58,8 +58,12 @@ const Converter = () => {
   }
   
   return (
-  <section className="mb-16">
+  <section className="mb-16 ">
    
+   
+   <h2
+    className="p-4 border-l-4 border-l-white text-white text-3xl font-bolder my-4 w-[70%]"
+   >U bedel Fartaada Cusmaani / Laatiin.</h2>
   
     <button
      className="w-fit p-2 mb-1 text-white  font-bold flex space-x-2"
