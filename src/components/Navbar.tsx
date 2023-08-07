@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <div 
+    <header 
     id="navbar"
     className="h-10 bg-gray-900 flex  items-baseline sticky space-x-4 top-0 py-2 mb-2 "
     >
@@ -27,7 +27,7 @@ const Navbar = () => {
     >
       About us
     </Link>
-    </div>
+    </header>
   )
 }
 

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="relative flex flex-col items-center ">
+    <footer className="relative flex flex-col items-center ">
       <span className="mb-4  text-sm text-gray-500 sm:text-center dark:text-gray-400">
         © 2023{" "}
         <a href="#" className="hover:underline">
@@ -102,7 +102,7 @@ const Footer = () => {
           <span className="sr-only">Dribbble account</span>
         </a>
       </div>
-    </div>
+    </footer>
   );
 };
 
