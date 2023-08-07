@@ -1,7 +1,5 @@
-// Values are not empty. If you dont see them, make sure your editor supports utf-16 character.
-
-export const latinOsmaniyaDoubles = {
-  "kh": "𐒅",
+export const latinOsmaniyaDoubles: { [key: string]: string } = {
+ "kh": "𐒅",
   "sh": "𐒉",
   "dh": "𐒊",
   "aa": "𐒛",
@@ -9,9 +7,8 @@ export const latinOsmaniyaDoubles = {
   "oo": "𐒝",
 };
 
-
-export const latinOsmaniyaSingles = {
-  "a": "𐒀",
+export const latinOsmaniyaSingles: { [key: string]: string } = {
+"alef": "𐒀",
   "b": "𐒁",
   "t": "𐒂",
   "j": "𐒃",
