@@ -8,6 +8,7 @@
       "ESNext"
     ],
     "allowJs": true,
+    "jsx": "react"
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
