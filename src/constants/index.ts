@@ -1,3 +1,3 @@
-import { latinOsmaniyaSingles, latinOsmaniyaDoubles } from "./latinMapOsmania";
+import { latinOsmaniSingles, latinOsmaniDoubles } from "./latinMapOsmania";
 
-export { latinOsmaniyaSingles, latinOsmaniyaDoubles }
+export { latinOsmaniSingles, latinOsmaniDoubles }

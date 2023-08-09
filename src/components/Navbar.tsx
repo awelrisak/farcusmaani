@@ -1,12 +1,21 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 const Navbar = () => {
+  
+  const navLinkStyles = ( { isActive } : { isActive: boolean } ) => {
+        return (
+          isActive
+            ?"text-white pb-2 px-2 text-md font-bold border-b border-b-2"
+            :"text-slate-300 text-md"
+        )
+      }
+      
   return (
     <header 
     id="navbar"
-    className="h-10 bg-gray-900 flex  items-baseline sticky space-x-4 top-0 py-2 mb-2 "
+    className="h-10 bg-gray-900 flex items-baseline sticky  top-0 py-2 mb-2 "
     >
     <Link
       to="/"
@@ -15,18 +24,26 @@ const Navbar = () => {
       Far-cusmaani.com
     </Link>
     
-    <Link 
+    {/*<nav className="flex space-x-4 items-baseline">
+    <NavLink 
       to="baro"
-      className="text-white text-md font-bold space-2 underline underline-white"
+      className={navLinkStyles}
     >
       Baro
-    </Link>
-       <Link 
-      to="baro"
-      className="text-white text-md font-bold space-2 underline underline-white"
+    </NavLink>
+    <NavLink 
+      to="blogs"
+      className={navLinkStyles}
     >
-      About us
-    </Link>
+      Blogs
+    </NavLink>
+       <NavLink 
+      to="about"
+      className={navLinkStyles}
+    >
+      About
+    </NavLink>
+    </nav>*/}
     </header>
   )
 }
