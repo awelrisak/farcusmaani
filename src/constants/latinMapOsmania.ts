@@ -1,4 +1,4 @@
-export const latinOsmaniyaDoubles: { [key: string]: string } = {
+export const latinOsmaniDoubles: { [key: string]: string } = {
  "kh": "𐒅",
   "sh": "𐒉",
   "dh": "𐒊",
@@ -7,7 +7,7 @@ export const latinOsmaniyaDoubles: { [key: string]: string } = {
   "oo": "𐒝",
 };
 
-export const latinOsmaniyaSingles: { [key: string]: string } = {
+export const latinOsmaniSingles: { [key: string]: string } = {
 "alef": "𐒀",
   "b": "𐒁",
   "t": "𐒂",
@@ -16,7 +16,6 @@ export const latinOsmaniyaSingles: { [key: string]: string } = {
   "d": "𐒆",
   "r": "𐒇",
   "s": "𐒈",
-  "sh": "𐒉",
   "c": "𐒋",
   "g": "𐒌",
   "f": "𐒍",
@@ -33,9 +32,6 @@ export const latinOsmaniyaSingles: { [key: string]: string } = {
   "i": "𐒘",
   "o": "𐒙",
   "u": "𐒚",
-  "aa": "𐒛",
-  "ee": "𐒜",
-  "oo": "𐒝",
   "0": "𐒠",
   "1": "𐒡",
   "2": "𐒢",

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, ChangeEvent } from "react";
-import { toOsmaniaAlphabet, toLatinAlphabet } from "../utils";
+import { useState, useEffect, useRef, ChangeEvent } from "react";
+import { toOsmaniAlphabet, toLatinAlphabet } from "../utils";
 import ClipboardIcon from "../icons/ClipboardIcon";
 import ClipboardCheckedIcon from "../icons/ClipboardCheckedIcon";
 import ConvertIcon from "../icons/ConvertIcon";
@@ -11,6 +11,7 @@ const Converter = () => {
 
   const timeOutRef = useRef<number | null>(null);
 
+   
   useEffect(() => {
     return () => {
       if (timeOutRef.current != null) {
@@ -20,7 +21,7 @@ const Converter = () => {
   }, []);
 
   const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    if (copyState === "copied") setCopyState("idle");
+    if (copyState === "copied") setCopyState("idle")
     setText(event.currentTarget.value);
   };
 
@@ -29,10 +30,10 @@ const Converter = () => {
       navigator.clipboard.writeText("Copied empty from Farcusmaani.com");
       return;
     }
-    const toCopyText = state ? toLatinAlphabet(text) : toOsmaniaAlphabet(text);
+    const toCopyText = state ? toLatinAlphabet(text) : toOsmaniAlphabet(text);
 
     navigator.clipboard
-      .writeText(`"${toCopyText}"\n--from Farcusmaani.com`)
+      .writeText(toCopyText)
       .then(() => {
         setCopyState("copied");
         timeOutRef.current = setTimeout(() => {
@@ -44,7 +45,7 @@ const Converter = () => {
 
   return (
     <section className="mb-16 ">
-      <h2 className="p-4 border-l-4 border-l-white text-white text-3xl font-bolder my-4 w-[70%]">
+      <h2 className="p-4 border-l-4 border-l-white text-white text-3xl font-bolder my-4 sm:w-[70%]">
         U bedel Fartaada Cusmaani / Laatiin.
       </h2>
 
@@ -79,7 +80,7 @@ const Converter = () => {
             state ? "Halkan ku qor far laatiinka..." : "Halkan ku qor far cusmaaniga..."
           }
           onChange={handleChange}
-          value={state ? toLatinAlphabet(text) : toOsmaniaAlphabet(text)}
+          value={state ? toLatinAlphabet(text) : toOsmaniAlphabet(text)}
         />
       </div>
     </section>

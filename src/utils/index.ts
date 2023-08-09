@@ -1,9 +1,9 @@
-import { toOsmaniaAlphabet,  toLatinAlphabet} from "./toOsmaniaAlphabet"
+import { toOsmaniAlphabet,  toLatinAlphabet} from "./latinOsmaniConverter"
 
 
 
 
 export { 
-    toOsmaniaAlphabet, 
+    toOsmaniAlphabet, 
     toLatinAlphabet,
     }
