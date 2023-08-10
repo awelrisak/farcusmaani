@@ -15,13 +15,13 @@ const Navbar = () => {
   return (
     <header 
     id="navbar"
-    className="h-10 bg-gray-900 flex items-baseline sticky  top-0 py-2 mb-2 "
+    className="h-10 bg-gray-900 flex items-baseline sticky  top-0 py-4 mb-2 "
     >
     <Link
       to="/"
       className="mb-4 grow text-slate-300 font-bold text-md"
     >
-      Far-cusmaani.com
+      Farcusmaani.com
     </Link>
     
     {/*<nav className="flex space-x-4 items-baseline">
