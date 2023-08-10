@@ -5,7 +5,7 @@ const Footer = () => {
     
       <span className="mb-4  text-sm text-gray-500 sm:text-center dark:text-gray-500">
         © 2023{" "}
-        <a href="cabdirisaaq.com" className="hover:underline">
+        <a href="https://www.cabdirisaaq.com" className="hover:underline">
           Abdurezak Farah
         </a>
         . All Rights Reserved.
