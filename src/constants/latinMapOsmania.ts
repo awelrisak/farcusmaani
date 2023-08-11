@@ -4,7 +4,9 @@ export const latinOsmaniDoubles: { [key: string]: string } = {
   "dh": "𐒊",
   "aa": "𐒛",
   "ee": "𐒜",
+  "ii": "𐒕",
   "oo": "𐒝",
+   "uu": "𐒓",
 };
 
 export const latinOsmaniSingles: { [key: string]: string } = {
