@@ -8,14 +8,18 @@ const Converter = () => {
   const [text, setText] = useState("");
   const [state, setState] = useState(true);
   const [copyState, setCopyState] = useState("idle");
+  //const [pasteState, setPasteState] = useState("idle");
 
-  const timeOutRef = useRef<number | null>(null);
-
+  const copyTimeOutRef = useRef<number | null>(null);
+  const pasteTimeOutRef = useRef<number | null>(null);
    
   useEffect(() => {
     return () => {
-      if (timeOutRef.current != null) {
-        clearTimeout(timeOutRef.current);
+      if (copyTimeOutRef.current != null) {
+        clearTimeout(copyTimeOutRef.current);
+      }
+       if (pasteTimeOutRef.current != null) {
+        clearTimeout(pasteTimeOutRef.current);
       }
     };
   }, []);
@@ -36,19 +40,25 @@ const Converter = () => {
       .writeText(toCopyText)
       .then(() => {
         setCopyState("copied");
-        timeOutRef.current = setTimeout(() => {
+        copyTimeOutRef.current = setTimeout(() => {
           setCopyState("idle");
         }, 2400);
       })
       .catch((error) => console.log("error"));
   };
+  
+  const handlePaste = () => {
+    navigator.clipboard
+      .readText()
+      .then((text) => {
+        setText(text)
+      })
+      .catch((error) => console.log("error"));
+  };
 
   return (
-    <section className="mb-16 ">
-      <h2 className="p-4 border-l-4 border-l-white text-white text-3xl font-bolder my-4 sm:w-[70%]">
-        U bedel Fartaada Cusmaani / Laatiin.
-      </h2>
-
+    <article className="mb-16 ">
+      
       <button
         className="w-fit p-2 mb-1 text-white  font-bold flex space-x-2"
         onClick={() => setState((prev) => !prev)}
@@ -57,11 +67,44 @@ const Converter = () => {
         <ConvertIcon />
         <span>{!state ? "Laatiin " : "Cusmaani"}</span>
       </button>
-
-      <div className="relative h-[50vh] w-full  bg-slate-200 rounded-t-lg">
-        <div className="h-10 width-full p-2 bg-slate-700 flex rounded-t-lg">
+      
+ <div className="flex flex-col sm:flex-row gap-4 ">
+      <section className="relative h-[50vh] w-full  bg-slate-200 rounded-lg ">
+        <div className="h-10 width-full p-2 bg-gray-700 flex rounded-t-lg">
           <h2 className="text-slate-300 font-bold ">
             {state ? "Far laatiinigii" : "Far cusmaanigii"}
+          </h2>
+          <div
+            className="p-1 ml-auto border border-slate-500 flex space-1 rounded-lg items-center text-white cursor-pointer "
+            role="button"
+            onClick={handlePaste}
+          >
+            <ClipboardIcon /> 
+            <span className="text-xs text-white ml-1">
+              paste
+            </span>
+          </div>
+        </div>
+        <textarea
+          className="w-full h-[calc(100%-2.5rem)] outline-none p-2 mb-4 text-white bg-slate-500  rounded-t-none rounded-b-lg"
+          placeholder={
+            (state 
+            ? "Halkan ku qor far laatiinka..." 
+            : "Halkan ku qor far cusmaaniga..."
+            )
+          }
+          onChange={handleChange}
+          value={!state ? toOsmaniAlphabet(text) : toLatinAlphabet(text)}
+        />
+         
+      </section>
+      
+      <section
+        className="relative h-[50vh] w-full  bg-slate-200 rounded-t-lg"
+      >
+           <div className="h-10 p-2 bg-slate-800 flex rounded-t-lg">
+          <h2 className="text-slate-300 font-bold ">
+            {state ? "Far cusmaanigii" : "Far laatiinkii"}
           </h2>
           <div
             className="p-1 ml-auto border border-slate-500 flex space-1 rounded-lg items-center text-white cursor-pointer "
@@ -74,16 +117,21 @@ const Converter = () => {
             </span>
           </div>
         </div>
-        <textarea
-          className="absolute w-full h-[100%] border border-slate-500 outline-none p-2 mb-4 text-white bg-slate-500 rounded-none"
-          placeholder={
-            state ? "Halkan ku qor far laatiinka..." : "Halkan ku qor far cusmaaniga..."
-          }
-          onChange={handleChange}
-          value={state ? toLatinAlphabet(text) : toOsmaniAlphabet(text)}
-        />
+        <p
+           className="absolute w-full h-[100%] outline-none p-2 mb-4 text-white white bg-slate-700 rounded-none rounded-b-lg text-md overflow-x-none overflow-y-auto "
+        >
+          { !text && (
+            <span
+              className="text-slate-500 font-md "
+            >
+              Meel madhan.
+            </span>
+          )}
+          { state ? toOsmaniAlphabet(text) : toLatinAlphabet(text)}
+         </p>
+      </section>
       </div>
-    </section>
+    </article>
   );
 };
 

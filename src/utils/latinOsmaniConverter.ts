@@ -8,7 +8,7 @@ const osmaniSinglesRegex = new RegExp(Object.values(latinOsmaniSingles).join('|'
 const osmaniDoublesRegex = new RegExp(Object.values(latinOsmaniDoubles).join('|'), 'gi');
 
 export const toOsmaniAlphabet = (text: string): string => {
-  const lt = toLatinAlphabet(text.toLowerCase())
+  const lt = text.toLowerCase() //toLatinAlphabet(text.toLowerCase())
   
   // Convert first double letters
   let convertedText = lt.replace(doublesKeysRegex, (char: string) => {

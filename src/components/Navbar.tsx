@@ -4,22 +4,22 @@ import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
   
-  const navLinkStyles = ( { isActive } : { isActive: boolean } ) => {
+  /*const navLinkStyles = ( { isActive } : { isActive: boolean } ) => {
         return (
           isActive
             ?"text-white pb-2 px-2 text-md font-bold border-b border-b-2"
             :"text-slate-300 text-md"
         )
-      }
-      
+      }*/
+     
   return (
     <header 
     id="navbar"
-    className="h-10 bg-gray-900 flex items-baseline sticky  top-0 py-4 mb-2 "
+    className="h-10 bg-gray-900 flex items-center sticky  top-0 py-4 mb-2 "
     >
     <Link
       to="/"
-      className="mb-4 grow text-slate-300 font-bold text-md"
+      className="py-2 mb-4 grow text-slate-300 font-bold text-md"
     >
       Farcusmaani.com
     </Link>
