@@ -1,14 +1,25 @@
-# Vite + React
+# Farcusmaani
 
-This is a [Vite](https://vitejs.dev) project together with React.
+Farcusmaani is a responsive website that allows users to interchange between the Somali Latin alphabet and the Somali Osmanya alphabet. You can check out the live demo at [farcusmaani.com](https://www.farcusmaani.com).
 
-[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/codesandbox/codesandbox-template-vite-react/main)
+<!-- TechStack -->
+### :space_invader: Technologies Used
 
-[Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) `.codesandbox/tasks.json` has been added to optimize it for [CodeSandbox](https://codesandbox.io/dashboard).
+[![My Skills](https://skillicons.dev/icons?i=ts,react,tailwind)](https://skillicons.dev)
 
-## Resources
+This project is built with the following technologies:
 
-- [CodeSandbox — Docs](https://codesandbox.io/docs/projects)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
-- [Vite — GitHub](https://github.com/vitejs/vite)
-- [Vite — Docs](https://vitejs.dev/guide/)
+- React
+- TypeScript
+- Tailwind CSS
+
+## Contact Information
+
+Feel free to get in touch with the project creator, Abdurezak Awil, through the following channels:
+
+- Personal Website: [cabdirisaaq.com](https://www.cabdirisaaq.com)
+- GitHub: [github.com/awelrisak](https://www.github.com/awelrisak)
+- Twitter: [twitter.com/awelrisak](https://www.twitter.com/awelrisak)
+- Instagram: [instagram.com/awelrisak](https://www.instagram.com/awelrisak)
+- WhatsApp: [+254740423737](https://wa.me/+254740423737)
+- Email: abdurazak.awil1@gmailcom
