@@ -60,7 +60,7 @@ const Converter = () => {
     <article className="mb-16 ">
       
       <button
-        className="w-fit p-2 mb-2 bg-blue-600 text-white  font-bold flex space-x-2"
+        className="w-fit rounded-sm py-2 px-4 mb-2 bg-blue-600 text-white  font-bold flex space-x-2"
         onClick={() => setState((prev) => !prev)}
       >
         <span>{state ? "Laatiin" : "Cusmaani"}</span>
@@ -95,7 +95,7 @@ const Converter = () => {
           }
           onChange={handleChange}
           value={!state ? toOsmaniAlphabet(text) : toLatinAlphabet(text)}
-          disabled={!state}
+          
         />
          
       </section>
