@@ -60,11 +60,11 @@ const Converter = () => {
     <article className="mb-16 ">
       
       <button
-        className="w-fit p-2 mb-1 text-white  font-bold flex space-x-2"
+        className="w-fit p-2 mb-2 bg-blue-600 text-white  font-bold flex space-x-2"
         onClick={() => setState((prev) => !prev)}
       >
         <span>{state ? "Laatiin" : "Cusmaani"}</span>
-        <ConvertIcon />
+        <span>&#8646;</span>
         <span>{!state ? "Laatiin " : "Cusmaani"}</span>
       </button>
       
@@ -72,7 +72,7 @@ const Converter = () => {
       <section className="relative h-[50vh] w-full  bg-slate-200 rounded-lg ">
         <div className="h-10 width-full p-2 bg-gray-700 flex rounded-t-lg">
           <h2 className="text-slate-300 font-bold ">
-            {state ? "Far laatiinigii" : "Far cusmaanigii"}
+            {state ? "Laatiin" : "Cusmaani"}
           </h2>
           <div
             className="p-1 ml-auto border border-slate-500 flex space-1 rounded-lg items-center text-white cursor-pointer "
@@ -98,7 +98,7 @@ const Converter = () => {
         />
          
       </section>
-      
+      {/*
       <section
         className="relative h-[50vh] w-full  bg-slate-200 rounded-t-lg"
       >
@@ -129,7 +129,7 @@ const Converter = () => {
           )}
           { state ? toOsmaniAlphabet(text) : toLatinAlphabet(text)}
          </p>
-      </section>
+      </section>*/}
       </div>
     </article>
   );
