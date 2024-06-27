@@ -90,11 +90,12 @@ const Converter = () => {
           placeholder={
             (state 
             ? "Halkan ku qor far laatiinka..." 
-            : "Halkan ku qor far cusmaaniga..."
+            : "Halkan ka eeg far cusmaaniga..."
             )
           }
           onChange={handleChange}
           value={!state ? toOsmaniAlphabet(text) : toLatinAlphabet(text)}
+          disabled={!state}
         />
          
       </section>
